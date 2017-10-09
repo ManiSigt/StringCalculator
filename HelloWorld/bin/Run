@@ -1,0 +1,1 @@
+java -cp src/main/resources/joda-time-2.9.9.jar:classesis.ru.hugb.HelloWorld
