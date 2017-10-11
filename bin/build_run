@@ -1,0 +1,4 @@
+./bin/clean
+./bin/build
+./bin/build_test
+./bin/run_test
