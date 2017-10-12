@@ -9,6 +9,9 @@ public class Calculator {
   			String numbers[] = text.split(",|\\\n");
   			return sum(numbers);
   		}
+  		if(text.contains("-")){
+  			throw new IllegalArgumentException("Negatives not allowed:");
+  		}
   		else {
   			return 1;
   		}	
