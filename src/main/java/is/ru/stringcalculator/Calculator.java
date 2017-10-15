@@ -7,8 +7,7 @@ public class Calculator {
   			return 0;  	
   		}
   		if(text.contains(",") || text.contains("\n")){
-  			String numbers[] = text.split(",|\\\n");
-  			return sum(numbers);
+  			return sum(split(text));
   		}
   		else {
   			return 1;
@@ -17,7 +16,18 @@ public class Calculator {
   	private static int toInt(String number){
   		return Integer.parseInt(number);
   	}
-
+  	private static String[] split(String number){
+  		String del = ",|\n";
+		if (number.startsWith("//")){
+			int delindex = number.indexOf("//") + 2; 
+			del = del + "|" + number.substring(delindex, delindex + 1); 
+			number = number.substring(delindex + 2); 
+			return number.split(del);
+		}
+		else {
+			return number.split(del);	
+		}
+  	}
   	private static int sum(String [] numbers){
   		ArrayList<Integer> negative = new ArrayList<Integer>();
   		int total = 0;
