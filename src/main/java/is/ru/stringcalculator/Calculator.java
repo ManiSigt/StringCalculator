@@ -26,7 +26,11 @@ public class Calculator {
   			if(numberin < 0){
   				negative.add(numberin);
   			}else{
-  			total += numberin;
+  				if(numberin > 1000){
+  					continue;
+  				}else{
+  				total += numberin;
+  				}
   			}
   		}
   		if(negative.size() > 0){

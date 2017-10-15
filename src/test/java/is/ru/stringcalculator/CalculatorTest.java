@@ -37,4 +37,9 @@ public class CalculatorTest {
             assertEquals("Negatives not allowed: [-1]", e.getMessage());
         }        
     }
+    @Test
+    public void testToBigNumbers()
+    {
+    	assertEquals(2, Calculator.add("1001,2"));
+    }
 }
